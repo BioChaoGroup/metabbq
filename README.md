@@ -1,8 +1,8 @@
 [![Preprint at bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-blue)](https://doi.org/10.1101/2021.03.29.437457)
 
-# MetaSeq (Early access stage)
+# MetaBBQ (Early access stage)
 
-This is a sequencing data processing pipeline mainly implemented with *sing-tube Long Fragment Reads (stLFR)* technology.
+This is a sequencing data processing pipeline mainly implemented with *single tube complete-coverage Long Fragment Read (stcLFR)* sequencing method.
 
 **Benchmark repository**: :octocat: [benchmark4stcLFR](https://github.com/BioChaoGroup/benchmark4stcLFR) 
 
