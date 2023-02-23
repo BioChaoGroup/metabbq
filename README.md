@@ -1,4 +1,4 @@
-[![Preprint at bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-blue)](https://doi.org/10.1101/2021.03.29.437457)
+[![Preprint at bioRxiv](https://img.shields.io/badge/preprint-bioRxiv-blue)](https://doi.org/10.1101/2021.03.29.437457) [![DOI](https://sandbox.zenodo.org/badge/525910361.svg)](https://sandbox.zenodo.org/badge/latestdoi/525910361)
 
 # MetaBBQ (Early access stage)
 
