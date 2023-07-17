@@ -7,28 +7,43 @@ beadSelect: 10
 distCutoff: 0.04
 divideSH: 10
 
-BB_LIST: "REF/barcode.list"
-REF_GEN: "REF/ncbi.5Ref.fasta"
+BB_LIST: 
+REF_GEN: ""
 
-REF_FA: "REF/ncbi.5Ref.fasta"
-REF_ID: "REF/ncbi.5Ref.faID"
+REF_FA: ""
+REF_ID: ""
 
-REF_nt: "/REF/blast_nt/nt"
-REF_silva: "REF/silva132/combine/SILVA_132_SSU_LSU_tax_DNA.blast"
+REF_nt: ""
+REF_silva: ""
 
 sampleType: "F" # F(ungi) or B(acteria)
+
+kk2_db: 
+OpenRef:
+  silva_SSU_blastdb:
+  silva_SSU_taxomap:
+  silva_LSU_blastdb:
+  silva_LSU_taxomap:
+  unite_ITS_blastdb:
+  unite_ITS_taxomap:
+MockRef:
+  bwa_db:
+  blastdb:
+  bed:
 
 ### adapters
 AdRCA: AAGTCGGACGCTGATAAGGTCGCCATGCCTCTCAGTACTCCGACTT
 AdFw:
 AdRv:
 A_primer_list_to_remove:
-A_primer_fa_to_find: "REF/primers.fa"
+A_primer_fa_to_find: ""
 ### Primers
 pmrFwd:
 pmrRev:
 ### method selection
 method:
+  QC:
+    cutOA: False
   cluster:
     mash: False
     dups: False
@@ -40,6 +55,12 @@ method:
 
 ### params
 
+#### decode barcodes
+fastp_process: 1000000 
+stLFR_pos1: 100
+stLFR_pos2: 116
+stLFR_pos3: 132
+
 #### mash dist params
 p_dist_k: 31
 p_dist_s: 1000
@@ -47,11 +68,18 @@ p_dist_s: 1000
 p_dist_min: 0.02
 p_dist_max: 0.04
 
+p_asm_minKmers: 300
+p_asm_minKmerCoverage: 10
+i_rdLen: 100
+i_seqPair: 2
+
 #### cluster cutoff
 p_cluster_minR: 5
 p_cluster_maxR: 1000
 p_cluster_topB: 0
 p_cluster_ranP: 0
+
+p_BIS_clust_id: 0.7
 
 #### community level
 p_dist_lv: 1
@@ -67,9 +95,13 @@ p_asm_min: 500
 p_asm_mem: 10000000000
 p_asm_cpu: 4
 
+p_pba_len_min: 800
+p_pba_len_max: 1200
+
 #VSEARCH
 p_VS_preClust: 99.9
 p_VS_postClust: 99
+p_VS_clust_Sid: 99
 
 #Circos
 p_cc_zoom: 1
@@ -87,3 +119,13 @@ thread:
   vsearch: 16
   blastn: 16
   athena: 24
+samples:
+  mix_1: output_MIX/mix_1
+  mix_2: output_MIX/mix_2
+
+#######################
+
+### Testing
+clean_ds_pieces:
+clean_ds_keep_files:
+
